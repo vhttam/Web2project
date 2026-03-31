@@ -1,1 +1,1 @@
-# Web_2_pr-ect
+# Web_2_project SGU
