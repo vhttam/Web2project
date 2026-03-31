@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* =========================================================
+   ADMIN DASHBOARD CSS - CLEAN & MINIMAL
+========================================================= */
+:root {
+  --admin-bg: #F4F6F9;
+  --admin-card: #FFFFFF;
+  --admin-text: #2C3E50;
+  --admin-text-muted: #7F8C8D;
+  --admin-primary: #34495E;
+  --admin-accent: #3498DB;
+  --admin-accent-hover: #2980B9;
+  --admin-border: #E0E6ED;
+  --shadow-sm: 0 2px 10px rgba(0,0,0,0.03);
+  --shadow-md: 0 5px 20px rgba(0,0,0,0.05);
+  --radius: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--admin-bg);
+  color: var(--admin-text);
+  line-height: 1.6;
+}
+
+/* Header & Title */
+h3.title_admin {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 40px 0 20px 0;
+  color: var(--admin-primary);
+}
+
+.wrapper {
+  background: var(--admin-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto 50px auto;
+  padding: 30px;
+}
+
+/* Nav Menu Admin */
+ul.admincp_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  background: var(--admin-primary);
+  padding: 0;
+  margin: 0 0 30px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+ul.admincp_list li {
+  margin: 0;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+ul.admincp_list li a {
+  display: block;
+  padding: 16px 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+ul.admincp_list li a:hover {
+  background: var(--admin-accent);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--admin-card);
+}
+
+table th, table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--admin-border);
+  vertical-align: middle;
+}
+
+table th {
+  background-color: var(--admin-bg);
+  color: var(--admin-primary);
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+table tr:hover td {
+  background-color: #FAFAFA;
+}
+
+/* Inputs & Forms */
+input[type="text"], input[type="password"], input[type="number"], select, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--admin-border);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+  transition: all 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--admin-accent);
+  background-color: #FFFFFF;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+input[type="submit"], button, .btn {
+  background: var(--admin-accent);
+  color: #FFF;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover, button:hover, .btn:hover {
+  background: var(--admin-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Links */
+a {
+  color: var(--admin-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--admin-accent-hover);
+  text-decoration: underline;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Form Tables (For layout inside Admin modules) */
+form table {
+  box-shadow: none;
+  border: none;
+  margin-top: 0;
+}
+form table td {
+  border: none;
+  padding: 12px;
+  vertical-align: top;
+}
+form table tr:hover td {
+  background-color: transparent;
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE ADMINCSS
+========================================================= */
+@media screen and (max-width: 768px) {
+  ul.admincp_list li {
+    flex: 1 1 50%;
+  }
+  .wrapper {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  table.lietke, table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+  table th, table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  ul.admincp_list li {
+    flex: 1 1 100%;
+  }
+}
